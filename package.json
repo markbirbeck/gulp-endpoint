@@ -1,0 +1,11 @@
+{
+  "name": "gulp-endpoint",
+  "version": "0.1.0",
+  "description": "Turn gulp tasks into an api server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mark Birbeck <mark.birbeck@gmail.com> (http://markbirbeck.com/)",
+  "license": "MIT"
+}
