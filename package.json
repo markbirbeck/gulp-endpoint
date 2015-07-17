@@ -1,13 +1,16 @@
 {
   "name": "gulp-endpoint",
   "version": "0.3.0",
-  "description": "Turn gulp tasks into an api server.",
+  "description": "A wrapper that presents a set of Gulp tasks as an API using Express.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mark Birbeck <mark.birbeck@gmail.com> (http://markbirbeck.com/)",
   "license": "MIT",
+  "repository": "markbirbeck/gulp-endpoint",
+  "bugs": "https://github.com/markbirbeck/gulp-endpoint/issues",
+  "homepage": "https://github.com/markbirbeck/gulp-endpoint",
   "dependencies": {
     "event-stream": "^3.3.1",
     "express": "^4.13.1",

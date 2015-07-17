@@ -22,18 +22,18 @@ gulp.task('xyz', function() {
 
 Doesn't that look a little bit like an API?
 
-I spent a lot of time looking at Sails, Hapi, LoopBack and more, and they're all really great. But I also realised that I was putting a lot of energy into turning my apps into streams. One minute it's a static site generator, the next an email pipeline using Handlebars templates or a transformation pipeline extracting text from PDFs...or even just simply pushing messages to queues -- I find that I'm always looking to use streams when I can.
+I spent a lot of time looking at Sails, Hapi, LoopBack and more, and they're all really great. But I also realised that since I was putting a lot of energy into turning my apps into streams -- static site generators, email pipelines with Handlebars templates, transformation pipelines extracting text from PDFs and finding dates -- then why not use streams in my APIs too?
 
-And then I figured that many of these pipelines would work just as well in an API. Why not just have one set of Gulp tasks for doing all my template transformation work, and then use those tasks both to send email and to run in Express?
+Many of these pipelines would work just as well in an API, so I decided to give it a go and have one set of Gulp tasks for doing things like my template transformation work, and then use those tasks to send email, to run in Express, and even to generate static files to upload to S3.
 
-It seems simple enough -- the answer seemed to be to wrap Gulp so that I could expose its tasks as Express endpoints.
+This module is the first cut of this, but I know its's going to grow.
 
 # Usage
 
 To use simply install `gulp-endpoint`:
 
 ```shell
-npm install --save gulp-endpoint
+npm install --save markbirbeck/gulp-endpoint
 ```
 
 and then run `endpoint` from the command-line:
@@ -42,7 +42,7 @@ and then run `endpoint` from the command-line:
 endpoint
 ```
 
-This will load your `gulpfile`, set up a route for each task, and then launch a server on the default port (3000).
+This will load your `gulpfile`, set up a route for each task, and then launch an Express server on the default port (3000).
 
 ## Options
 
