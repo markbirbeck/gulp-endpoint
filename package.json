@@ -7,5 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mark Birbeck <mark.birbeck@gmail.com> (http://markbirbeck.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "event-stream": "^3.3.1",
+    "express": "^4.13.1",
+    "lodash": "^3.10.0",
+    "minimist": "^1.1.1",
+    "response-time": "^2.3.1",
+    "vinyl": "^0.5.0"
+  },
+  "bin": {
+    "endpoint": "./bin/endpoint.js"
+  }
 }
