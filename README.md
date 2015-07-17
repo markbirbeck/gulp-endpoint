@@ -62,7 +62,7 @@ endpoint --port 3005
 
 # Behaviour
 
-Any request that hits a URL with the same name as the Gulp task will cause the task to be run. The `gulp.src` and `gulp.dest` functions are patched so that data provided with a `POST` to the task will become a source file, and any data at the end will be returned to the API caller.
+Any request that hits a URL with the same name as the Gulp task will cause the corresponding task to be run. The `gulp.src` and `gulp.dest` functions are patched so that data provided with a `POST` to the task will become a source file, and any data pushed to `dest()` at the end will be returned to the API caller.
 
 # Example
 
@@ -90,7 +90,7 @@ gulp.task('compile-page', function() {
 gulp.task('default', ['compile-page']);
 ```
 
-Running `endpoint` from the same directory as this file will result in three endpoints being created:
+Running `endpoint` from the same directory as this file will result in a server with three endpoints being created:
 
 ```
 http://localhost:3000/
@@ -100,6 +100,6 @@ http://localhost:3000/concat
 
 The first two both refer to the `compile-page` task, since any task called 'default' is connected to the root.
 
-If a `GET` request is made to any of these URLs then the task is run with the usual `gulp.src` function in place, which means processing of any values set in the `gulpfile` will take place. The results of the operations will be returned in the HTTP response.
+Now, if a `GET` request is made to any of these URLs then the corresponding task is run with the usual `gulp.src` function in place, which means processing of any values set in the `gulpfile` will take place. (In this case the files `hello.txt`, `world.txt` and `page.html` will be used in the pipeline.) The results of these tasks will then be returned in the HTTP response.
 
-However, if a `POST` request is made then the document that is posted as part of the request is fed in to the `src` stage.
+However, if a `POST` request is made to these same endpoints then the document that is posted as part of the request is fed in to the pipeline, and the files specified as input in the `gulpfile` are ignored.
