@@ -32,4 +32,16 @@ and then run `endpoint` from the command-line:
 endpoint
 ```
 
-This will load your `gulpfile`, setting up a route for each task, and launch a server on the port defined by the `PORT` environment variable, or the `--port` command line option. If neither are specified then the default is 3000.
+This will load your `gulpfile`, setting up a route for each task, and then launching a server on the default port, 3000.
+
+To select another port either define the `PORT` environment variable:
+
+```shell
+PORT=3005 endpoint
+```
+
+or use the `--port` command line option:
+
+```shell
+endpoint --port 3005
+```
