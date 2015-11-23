@@ -17,7 +17,7 @@
     "lodash": "^3.10.0",
     "minimist": "^1.1.1",
     "response-time": "^2.3.1",
-    "vinyl": "^0.5.0"
+    "vinyl": "^1.1.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
