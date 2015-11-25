@@ -12,6 +12,7 @@
   "bugs": "https://github.com/markbirbeck/gulp-endpoint/issues",
   "homepage": "https://github.com/markbirbeck/gulp-endpoint",
   "dependencies": {
+    "cors": "^2.7.1",
     "event-stream": "^3.3.1",
     "express": "^4.13.1",
     "lodash": "^3.10.0",
