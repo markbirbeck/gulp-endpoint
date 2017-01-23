@@ -15,6 +15,7 @@
     "cors": "^2.7.1",
     "event-stream": "^3.3.1",
     "express": "^4.13.1",
+    "highland": "^2.10.1",
     "lodash": "^3.10.0",
     "minimist": "^1.1.1",
     "response-time": "^2.3.1",
