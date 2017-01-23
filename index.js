@@ -17,7 +17,7 @@ var wireTasks = function(gulp) {
    */
 
   Object.keys(gulp.tasks).forEach(function(taskName) {
-    wrapper.wire(taskName, function(src, dest, cb) {
+    wrapper.wire(taskName, function(params, src, dest, cb) {
 
       /**
        * Override the gulp src() and dest() methods before running the task:
@@ -25,6 +25,7 @@ var wireTasks = function(gulp) {
 
       gulp.src = (src) ? src : _src;
       gulp.dest = (dest) ? dest : _dest;
+      gulp._params = Object.apply({}, params);
       gulp.start(taskName, cb);
     });
     console.log('Wired in task:', taskName);
