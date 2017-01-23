@@ -25,7 +25,7 @@ var wireTasks = function(gulp) {
 
       gulp.src = (src) ? src : _src;
       gulp.dest = (dest) ? dest : _dest;
-      gulp._params = Object.apply({}, params);
+      gulp._params = Object.assign({}, params);
       gulp.start(taskName, cb);
     });
     console.log('Wired in task:', taskName);
