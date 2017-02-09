@@ -1,6 +1,6 @@
 {
   "name": "gulp-endpoint",
-  "version": "0.10.1",
+  "version": "0.11.0",
   "description": "A wrapper that presents a set of Gulp tasks as an API using Express.",
   "main": "index.js",
   "scripts": {
